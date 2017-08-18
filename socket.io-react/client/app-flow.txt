@@ -1,0 +1,49 @@
+1. Socket Events
+    a. add user
+    b. send message
+        - save to db
+
+2. UI & Components
+    a. user input
+    b. chat area container
+        - message list
+        - text input group
+
+3. State and state flow
+    a. Data to hold messages. Attributes:
+        - id (timestamp)
+        - username
+        - message
+
+4. Reducer
+    a. change the state of message items (add)
+    b. actions:
+        - ADD_USER
+        - POST_MESSAGE
+
+5. Store
+    a. Create store with reducer
+
+------
+
+EVENTS
+
+When user provides username:
+    - load history of messages for UI
+    - action ADD_USER
+    - remove UI for userbox
+
+When user press enter:
+    - Call reducer
+    - Update UI
+    - API request for DB
+
+------
+
+DATABASE
+
+When user enters
+    
+
+
+    

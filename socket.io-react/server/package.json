@@ -1,0 +1,20 @@
+{
+  "name": "foo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./app",
+    "test": "node ./tests/*.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "~1.17.1",
+    "cors": "^2.8.4",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "mongoose": "^4.11.7",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^2.0.3"
+  }
+}

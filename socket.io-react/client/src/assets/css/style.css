@@ -1,0 +1,60 @@
+/**
+ * Main chat container
+ */
+.container-chat{
+    background-color: #f2f2f2;
+    height: 100vh;
+    top: 0;
+}
+
+.container-chat,
+.stacked-panels{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+/**
+ * Stack or outer panels
+ */
+.stacked-panels{
+    position: absolute;
+    width: 100%;
+}
+
+#sp-user-box{
+    top: 0;
+    height: 100%;
+    background-color: #222;
+    
+}
+
+#sp-user-box input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    position: fixed;
+    width: 90%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 0;
+    box-shadow: none !important;
+    font-size: 25px;
+    color: #989898;
+    font-weight: 100;
+}
+
+#sp-message-box{
+    bottom: 0;
+    height: 38px;
+}
+
+#sp-message-list{
+    top: 0;
+    height: calc(100% - 38px);
+    overflow: auto;
+}
