@@ -13,15 +13,17 @@ const cors = require('cors');
 const server = http.createServer(app);
 const io = require('socket.io')(server);
 
+const channels = require('./sockets/server')(io);
+
 const API = require('./services/api');
 
 app.use(cors());
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/services', API);
 
 server.listen(port, () => {
-    //require('./socket/server')(io);
     console.log('Server is listening at port:', port);
 });

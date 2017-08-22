@@ -12,6 +12,7 @@ export class MessageList extends React.Component{
                 <ul className="list-group">
                     <OldMessageItem messages={this.props.messages} />
                     <NewMessageItem message={store.getState()} />
+                    {console.log( store.getState() )}
                 </ul>
             </div>
         );

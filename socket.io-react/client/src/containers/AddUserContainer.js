@@ -13,14 +13,17 @@ export class AddUserContainer{
             let container = (event.target).parentElement.parentElement.parentElement;
             container.style.display = 'none';
 
-            axios.get('http://localhost:2087/services/get-messages/')
-            .then((response) => {
+            axios.get('http://10.202.215.79:2087/services/get-messages/')
+            .then((response) => { 
                 
                 const messages = response.data;
                 const isLoaded = true;
 
                 setTimeout(() => {
                     callback(isLoaded, messages);
+                    document.getElementById('username-plate').innerText = window.username;
+                    let height = document.querySelector('.list-group').clientHeight + document.querySelector('.list-group-item').clientHeight;
+                    document.getElementById('sp-message-list').scrollTop = height;
                 }, 250);
 
             })

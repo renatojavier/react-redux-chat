@@ -43,11 +43,8 @@ export class MainPage extends React.Component{
 
     }
 
-    updateMessage(){
-
-    }
-
     render(){
+        console.log('rendered mainpage...');
         return (
             <UserBox 
                 isLoaded={this.state.isLoaded} 

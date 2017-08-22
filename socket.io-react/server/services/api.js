@@ -8,4 +8,13 @@ router.get('/get-messages', (req, res, next) => {
     });
 });
 
+router.post('/post-message', (req, res, next) => {
+    
+    main.pushMessage(req.body, (err, data) => {
+        if( err ) res.send(`ERROR posting message of ${data.username}`);
+        res.send(data);
+    });
+    
+});
+
 module.exports = router;

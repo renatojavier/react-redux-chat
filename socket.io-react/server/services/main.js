@@ -19,3 +19,20 @@ exports.loadHistoryMessages = (callback) => {
         }
     });
 };
+
+/**
+ * Push message to DB
+ */
+
+exports.pushMessage = (data, callback) => {
+    messagesModel.create({
+        id: data.id,
+        username: data.username,
+        message: data.message
+    }, (err, data) => {
+        if(err)
+            callback(err, null);
+        else
+            callback(null, data);
+    });
+};
